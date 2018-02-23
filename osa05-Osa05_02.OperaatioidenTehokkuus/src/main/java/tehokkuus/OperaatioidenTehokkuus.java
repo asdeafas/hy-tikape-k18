@@ -37,7 +37,7 @@ public class OperaatioidenTehokkuus {
             stmt.setString(3, rivi.getOperation());
             stmt.setString(4, rivi.getUser());
             stmt.setString(5, rivi.getDevice());
-            int aika = (int) Math.toIntExact(rivi.getDate().getTime());
+            int aika = (int) rivi.getDate().getTime();
             stmt.setInt(6,aika);
 
             stmt.executeUpdate();
@@ -135,7 +135,7 @@ public class OperaatioidenTehokkuus {
             stmt2.setString(1, rivi.getIp());
             stmt2.setString(2, rivi.getOperation());
             stmt2.setString(3, rivi.getDevice());
-            int aika = (int) Math.toIntExact(rivi.getDate().getTime());
+            int aika = (int) rivi.getDate().getTime();
             stmt2.setInt(4, aika);
             stmt2.setInt(5, userId);
             stmt2.setInt(6, pageId);

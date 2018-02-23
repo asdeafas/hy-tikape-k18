@@ -1,0 +1,8 @@
+Tiedon lisääminen tietokantaan 1 kesti 1602149586 nanosekuntia.
+Tiedon lisääminen tietokantaan 2 kesti 2653691287 nanosekuntia.
+Tiedon lisääminen tietokantaan 1 kesti 2238194307 nanosekuntia.
+Tiedon lisääminen tietokantaan 2 kesti 2979541521 nanosekuntia.
+Tiedon lisääminen tietokantaan 1 kesti 2368098821 nanosekuntia.
+Tiedon lisääminen tietokantaan 2 kesti 4460473257 nanosekuntia.
+Tiedon lisääminen tietokantaan 1 kesti 2137793215 nanosekuntia.
+Tiedon lisääminen tietokantaan 2 kesti 3636255619 nanosekuntia.

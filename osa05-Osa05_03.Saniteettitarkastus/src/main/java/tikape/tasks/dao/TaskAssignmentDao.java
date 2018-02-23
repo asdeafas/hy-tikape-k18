@@ -3,6 +3,7 @@ package tikape.tasks.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.ResultSet;
 import java.util.List;
 import tikape.tasks.database.Database;
 import tikape.tasks.domain.TaskAssignment;
@@ -28,11 +29,22 @@ public class TaskAssignmentDao implements Dao<TaskAssignment, Integer> {
     @Override
     public TaskAssignment saveOrUpdate(TaskAssignment object) throws SQLException {
         try (Connection conn = database.getConnection()) {
+            PreparedStatement uniqueStmt = conn.prepareStatement(
+                    "SELECT TaskAssignment.user_id FROM TaskAssignment"
+                            + "WHERE TaskAssignment.task_id=?");
+            
+            uniqueStmt.setInt(1, object.getTaskId());
+            
+            ResultSet rs = uniqueStmt.executeQuery();
+            
+            
+            if (!rs.next()) {
             PreparedStatement stmt = conn.prepareStatement(
                     "INSERT INTO TaskAssignment (task_id, user_id, completed) VALUES (?, ?, 0)");
             stmt.setInt(1, object.getTaskId());
             stmt.setInt(2, object.getUserId());
             stmt.executeUpdate();
+            }
         }
 
         return null;
