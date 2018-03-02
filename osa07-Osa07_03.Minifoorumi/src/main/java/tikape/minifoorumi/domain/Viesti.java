@@ -5,6 +5,7 @@ public class Viesti {
     private int id;
     private int viestiketju_id;
     private String sanoma;
+    private int jarjestys;
     
     public Viesti(String sanoma) {
         this.sanoma = sanoma;
