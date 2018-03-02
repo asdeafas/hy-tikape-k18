@@ -1,0 +1,21 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Messages</title>
+        <meta charset="utf-8" />
+    </head>
+
+    <body>
+        <h1>Messages</h1>
+
+        -- viestien listaus
+
+        <h2>Add new message</h2>
+
+        <form method="POST" action="/messages">
+            <input type="text" name="content"/><br/>
+            <input type="submit" value="Add!"/>
+        </form>
+    </body>
+</html>
