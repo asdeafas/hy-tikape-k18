@@ -10,9 +10,11 @@ public class MinifoorumiApplication {
     public static void main(String[] args) throws Exception {
 
         Spark.get("*", (req, res) -> {
+
             HashMap map = new HashMap<>();
             
             return new ModelAndView(map,"messages");
         },new ThymeleafTemplateEngine());
+
     }
 }
