@@ -2,24 +2,57 @@
 package tikape.minifoorumi.domain;
 
 public class Viesti {
-    private int id;
-    private int viestiketju_id;
+    private Integer id;
+    private Integer viestiketju_id;
     private String sanoma;
-    private int jarjestys;
+    private Integer jarjestys;
     
-    public Viesti(String sanoma) {
-        this.sanoma = sanoma;
+    public Viesti() {
+        this.id = null;
+        this.viestiketju_id = null;
+        this.sanoma = null;
+        this.jarjestys = null;
     }
     
-    public int getId() {
+    public Viesti(String sanoma) {
+        this.id = null;
+        this.viestiketju_id = null;
+        this.sanoma = sanoma;
+        this.jarjestys = null;
+    }
+    
+        public Viesti(String sanoma,Integer viestiketju_id) {
+        this.id = null;
+        this.viestiketju_id = viestiketju_id;
+        this.sanoma = sanoma;
+        this.jarjestys = null;
+    }
+    
+    public Viesti(Integer id, Integer viestiketju_id, String sanoma, Integer jarjestys) {
+        this.id = id;
+        this.viestiketju_id = viestiketju_id;
+        this.sanoma = sanoma;
+        this.jarjestys = jarjestys;
+    }
+    
+    public Integer getId() {
         return this.id;
     }
     
-    public int getViestiketjuId() {
+    public Integer getViestiketjuId() {
         return this.viestiketju_id;
     }
     
     public String getSanoma() {
         return this.sanoma;
     }
+    
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    
+    public void setJarjestys(Integer jarjestys) {
+        this.jarjestys = jarjestys;
+    }
+    
 }
